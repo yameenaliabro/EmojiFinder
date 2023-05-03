@@ -25,15 +25,7 @@ return(
      onChange={event => setSearchTerm(event.target.value)
      }
 />
-<div style={{
-  display:"flex",
-  flexDirection:'row',
-  justifyContent:'space-around',
-  flexWrap:'wrap',
-  alignContent:'center',
-  alignItems:'center'
-
-}}>
+<div className='set-row'>
   <div className='middle'>
   {filteredEmojis.map((item)=>{
     return(
