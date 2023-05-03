@@ -1,0 +1,21 @@
+.main-container input{
+    height: 50px;
+    font-size: 25px;
+}
+.main-container button{
+    }
+.main-container
+.middle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.middle img{
+    background-color: #efefef;
+    padding: 10px;
+}
