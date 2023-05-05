@@ -6,7 +6,6 @@ function FindEmoji() {
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setloading] = useState(false)
   const [showmore, setshowmore] = useState(100)
-  const  [check,setcheck] = useState(false)
   useEffect(() => {
     setloading(true);
     fetch(`https://api.github.com/emojis`)
@@ -25,7 +24,6 @@ function FindEmoji() {
   });
   const searchfilter = (event)=>{
 setSearchTerm(event.target.value)
-setcheck(true)
   }
   return (
     <div className='main-container'>
@@ -48,7 +46,7 @@ setcheck(true)
           </div>
         </div>
         <div className='loadmore-button'>
-        <Button onClick={handleloadmore} type='primary' disabled={check}>LoadMore</Button>
+        <Button onClick={handleloadmore} type='primary'>LoadMore</Button>
         </div>
       </Spin>
     </div>
