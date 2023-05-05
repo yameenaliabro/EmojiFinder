@@ -1,6 +1,7 @@
 .main-container input{
     height: 50px;
     font-size: 25px;
+    padding: 10px;
 }
 .set-row{
     display:flex;
@@ -9,6 +10,14 @@
     flex-wrap: wrap;
      align-items: center;
     align-content: center;
+}
+.loadmore-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .main-container
 .middle{
