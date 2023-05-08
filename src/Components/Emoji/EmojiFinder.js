@@ -14,7 +14,8 @@ function FindEmoji() {
         setEmojis(Object.keys(data))
         setloading(false);
       })
-      .catch(error => console.error(error));
+      .catch(error => 
+        console.error(error));
   }, []);
   const handleloadmore = () => {
     setshowmore(prev => prev += 100);
@@ -42,7 +43,7 @@ setSearchTerm(event.target.value)
                   </div>
                 )
               }
-            })}
+            })} 
           </div>
         </div>
         <div className='loadmore-button'>
