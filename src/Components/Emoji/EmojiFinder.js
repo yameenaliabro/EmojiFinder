@@ -1,4 +1,4 @@
-import { Input, Spin, Image, Button } from 'antd';
+import { Input, Spin, Image, Button, message } from 'antd';
 import React, { useState, useEffect } from 'react';
 import "./emojifinder.css"
 function FindEmoji() {
@@ -23,6 +23,10 @@ function FindEmoji() {
   const filteredEmojis = emojis.filter(emoji => {
     return emoji.includes(searchTerm);
   });
+  let copytext = (item)=>{
+    navigator.clipboard.writeText(item)
+    message.success("emoji copy sucess")
+  }
   const searchfilter = (event)=>{
 setSearchTerm(event.target.value)
   }
@@ -39,7 +43,7 @@ setSearchTerm(event.target.value)
               if (i <= showmore + 1) {
                 return (
                   <div className='main'>
-                    <Image src={`https://github.githubassets.com/images/icons/emoji/${item}.png`} />
+                    <img src={`https://github.githubassets.com/images/icons/emoji/${item}.png`}  onClick={()=> copytext(item)}/>
                   </div>
                 )
               }
